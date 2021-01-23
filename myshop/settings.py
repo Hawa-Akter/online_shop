@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +117,10 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Setting custom Session key for cart
+# Store the cart in the user session
+CART_SESSION_ID = 'cart'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -128,3 +133,5 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join('static_cdn', 'static_root')
 MEDIA_ROOT = os.path.join('static_cdn', 'media_root')
+
+#py manage.py collectstatic
